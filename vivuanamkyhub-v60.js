@@ -7,7 +7,9 @@
   const hubId = "vnamky-supreme-v60";
   if (document.getElementById(hubId)) document.getElementById(hubId).remove();
 
-  let nhayData = `
+  (function() {
+    // 1. Dữ liệu 
+    let nhayData = `
   # SAO GÕ NÈ EM
 # CON ĐĨ CHÓ
 # GÕ ANH XEM
@@ -6165,10 +6167,11 @@ dưới đất có có ngàn lưỡi dao nó lao vô cái lồn mẹ m
 # Cha mày hóa thân thành hắc bạch vô thường cha mày bắt hồn đĩ mẹ mày xuống chầu diêm vương 
 # cha win r nhé con thú 
   `;
-  let nhayData = rawText
-    .split(/\r?\n/)
-    .map((line) => line.replace(/^#\s?/, "").trim())
-    .filter((line) => line !== "");
+  // 2. Phần xử lý dữ liệu 
+    let nhayData = rawText
+        .split(/\r?\n/)
+        .map((line) => line.replace(/^#\s?/, "").trim())
+        .filter((line) => line !== "");
   const flashUrl = "https://i.ibb.co/3mS0X9S/flash.gif";
   let state = {
     running: false,
@@ -6455,3 +6458,4 @@ dưới đất có có ngàn lưỡi dao nó lao vô cái lồn mẹ m
   };
   document.onmouseup = () => (d = false);
 })();
+
