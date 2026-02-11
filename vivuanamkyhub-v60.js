@@ -7,9 +7,10 @@
   const hubId = "vnamky-supreme-v60";
   if (document.getElementById(hubId)) document.getElementById(hubId).remove();
 
+ {
   (function() {
-    // 1. Dữ liệu 
-    let nhayData = `
+    // 1. Dữ liệu nhây
+    const rawText = `
   # SAO GÕ NÈ EM
 # CON ĐĨ CHÓ
 # GÕ ANH XEM
@@ -6167,11 +6168,28 @@ dưới đất có có ngàn lưỡi dao nó lao vô cái lồn mẹ m
 # Cha mày hóa thân thành hắc bạch vô thường cha mày bắt hồn đĩ mẹ mày xuống chầu diêm vương 
 # cha win r nhé con thú 
   `;
-  // 2. Phần xử lý dữ liệu 
+    // 3. KHAI BÁO BIẾN HỆ THỐNG
     let nhayData = rawText
         .split(/\r?\n/)
         .map((line) => line.replace(/^#\s?/, "").trim())
         .filter((line) => line !== "");
+
+    const flashUrl = "https://i.ibb.co/3mS0X9S/flash.gif";
+    let state = {
+        running: false,
+        count: 0,
+        task: "Idle",
+        indexNhay: 0,
+        currentMedia: null,
+        flashBlob: null,
+    };
+  // 2. Xử lý dữ liệu (Dùng biến nội bộ để không bị lỗi 'already declared')
+    const currentLines = rawText
+        .split(/\r?\n/)
+        .map((line) => line.replace(/^#\s?/, "").trim())
+        .filter((line) => line !== "");
+
+    console.log("%c VIVUNAMKY HUB LOADED! ", "background: red; color: white; font-size: 20px; font-weight: bold;");
   const flashUrl = "https://i.ibb.co/3mS0X9S/flash.gif";
   let state = {
     running: false,
@@ -6458,4 +6476,5 @@ dưới đất có có ngàn lưỡi dao nó lao vô cái lồn mẹ m
   };
   document.onmouseup = () => (d = false);
 })();
+
 
