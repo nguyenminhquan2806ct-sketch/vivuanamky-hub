@@ -1,4 +1,4 @@
-// VIVUANAMKY HUB V60.0 - MODERN SUPREME (STABLE & FIXED TABS)
+// VIVUANAMKY HUB V60.0 - MODERN SUPREME (STABLE & FIXED TABS) - UPDATED
 (function () {
   const validKeys = ["VIVUANAMKY-2026", "namkyontop"];
   const userKey = prompt("ENTER KEY");
@@ -7,158 +7,909 @@
   const hubId = "vnamky-supreme-v60";
   if (document.getElementById(hubId)) document.getElementById(hubId).remove();
 
-  let nhayData = [
-    "s ay",
-    "sua e",
-    "le e",
-    "manh ma",
-    "phe ak",
-    "tk ga",
-    "s vay",
-    "sua cai",
-    "le ma",
-    "o kia",
-    "tk ngu",
-    "manh k",
-    "slow ak",
-    "speed dei",
-    "phe ak",
-    "phe v",
-    "oc c",
-    "cn di",
-    "tat ak",
-    "clm",
-    "phe vat",
-    "sua mau",
-    "em rai",
-    "manh cai",
-    "le cai",
-    "s do",
-    "sua e",
-    "le e",
-    "manh di",
-    "yeu v",
-    "run ak",
-    "keng ngay",
-    "keng ma",
-    "manh k",
-    "sua k",
-    "sua ak",
-    "sua de",
-    "manh chu",
-    "manh nua",
-    "s kia",
-    "manh ma",
-    "phe ak",
-    "s kia",
-    "manh chu",
-    "tk ngu",
-    "sua ak",
-    "sua k",
-    "son mau",
-    "le mau",
-    "hang cai",
-    "le cai",
-    "son k",
-    "son ak",
-    "manh ak",
-    "s vay",
-    "hang cai",
-    "duoi ak",
-    "tk ngu",
-    "ccho",
-    "sua mau",
-    "le ma",
-    "manh di",
-    "co ti",
-    "le ti",
-    "clm",
-    "phe ak",
-    "cn di",
-    "chat mau",
-    "keng k",
-    "keng ak",
-    "keng ngay",
-    "manh cai",
-    "le nua",
-    "sua nua",
-    "chat mau",
-    "s ay",
-    "son cai",
-    "le cai",
-    "tk du",
-    "du ak",
-    "lo lo",
-    "on k",
-    "k ak",
-    "phe v",
-    "o o",
-    "cham v",
-    "lag ak",
-    "ngu v",
-    "kaka",
-    "r x",
-    "win ak",
-    "vtr ak",
-    "noti ak",
-    "ez v",
-    "ei ei",
-    "s do",
-    "chat k",
-    "chat ak",
-    "hang dei",
-    "le cai",
-    "son mau",
-    "em rai",
-    "le ma",
-    "cham v",
-    "slow v",
-    "bai ak",
-    "ei ku",
-    "dit mm",
-    "sua mau",
-    "so ak",
-    "rum ak",
-    "oc c",
-    "le k",
-    "le ma",
-    "cn di",
-    "tat ak",
-    "kem v",
-    "sua mau",
-    "le ti",
-    "co ti",
-    "mau nao",
-    "em rai",
-    "manh ma",
-    "sua k",
-    "son le",
-    "hang de",
-    "manh de",
-    "yeu v",
-    "cay ak",
-    "clm",
-    "kaka",
-    "ngu cay",
-    "met ak",
-    "kmm",
-    "sua len",
-    "son len",
-    "hang de",
-    "ngu ak",
-    "le ei",
-    "sua cai",
-    "le nao",
-    "sua chu",
-    "phe ak",
-    "tk ga",
-    "hang de",
-    "manh nua",
-    "son ma",
-    "ngu ak",
-    "tk oc",
-    "chat mau",
-  ];
+    let rawText = `s ay
+sua e
+le e
+manh ma
+phe ak
+tk ga
+s vay
+sua cai
+le ma 
+o kia 
+tk ngu 
+manh k 
+slow ak
+speed dei
+phe ak 
+phe v 
+oc c
+cn di
+tat ak
+clm 
+phe vat 
+sua mau 
+em rai
+manh cai
+le cai 
+s do
+sua e
+le e 
+manh di
+yeu v
+run ak
+keng ngay
+keng ma 
+manh k 
+sua k 
+sua ak
+sua de
+manh chu
+manh nua
+s kia
+manh ma 
+phe ak
+s kia
+manh chu
+tk ngu 
+sua ak 
+sua k
+son mau
+le mau 
+hang cai 
+le cai 
+son k 
+son ak
+manh ak 
+s vay 
+hang cai 
+duoi ak 
+tk ngu 
+ccho
+sua mau 
+le ma 
+manh di
+co ti 
+le ti
+clm
+phe ak 
+cn di
+chat mau 
+keng k
+keng ak
+keng ngay 
+manh cai 
+le nua 
+sua nua 
+chat mau 
+s ay
+son cai 
+le cai
+tk du
+du ak 
+lo lo
+on k 
+k ak 
+phe v
+o o
+cham v
+lag ak
+ngu v
+kaka
+r x 
+win ak 
+vtr ak
+noti ak 
+ez v
+ei ei
+s do
+chat k
+chat ak
+hang dei
+le cai
+son mau 
+em rai 
+le ma 
+cham v
+slow v
+bai ak 
+ei ku
+dit mm
+sua mau 
+so ak
+rum ak
+oc c
+le k 
+le ma 
+cn di
+tat ak
+kem v
+sua mau
+le ti
+co ti
+mau nao 
+em rai
+manh ma 
+sua k 
+son le
+hang de
+manh de
+yeu v
+cay ak
+clm
+kaka 
+ngu cay
+met ak
+kmm
+sua len 
+son len 
+hang de
+ngu ak
+le ei
+sua cai 
+le nao 
+sua chu 
+phe ak
+tk ga 
+hang de
+manh nua 
+son ma 
+ngu ak 
+tk oc 
+chat mau
+s ay
+sua e
+le e
+manh ma
+phe ak
+tk ga
+s vay
+sua cai
+le ma 
+o kia 
+tk ngu 
+manh k 
+slow ak
+speed dei
+phe ak 
+phe v 
+oc c
+cn di
+tat ak
+clm 
+phe vat 
+sua mau 
+em rai
+manh cai
+le cai 
+s do
+sua e
+le e 
+manh di
+yeu v
+run ak
+keng ngay
+keng ma 
+manh k 
+sua k 
+sua ak
+sua de
+manh chu
+manh nua
+s kia
+manh ma 
+phe ak
+s kia
+manh chu
+tk ngu 
+sua ak 
+sua k
+son mau
+le mau 
+hang cai 
+le cai 
+son k 
+son ak
+manh ak 
+s vay 
+hang cai 
+duoi ak 
+tk ngu 
+ccho
+sua mau 
+le ma 
+manh di
+co ti 
+le ti
+clm
+phe ak 
+cn di
+chat mau 
+keng k
+keng ak
+keng ngay 
+manh cai 
+le nua 
+sua nua 
+chat mau 
+s ay
+son cai 
+le cai
+tk du
+du ak 
+lo lo
+on k 
+k ak 
+phe v
+o o
+cham v
+lag ak
+ngu v
+kaka
+r x 
+win ak 
+vtr ak
+noti ak 
+ez v
+ei ei
+s do
+chat k
+chat ak
+hang dei
+le cai
+son mau 
+em rai 
+le ma 
+cham v
+slow v
+bai ak 
+ei ku
+dit mm
+sua mau 
+so ak
+rum ak
+oc c
+le k 
+le ma 
+cn di
+tat ak
+kem v
+sua mau
+le ti
+co ti
+mau nao 
+em rai
+manh ma 
+sua k 
+son le
+hang de
+manh de
+yeu v
+cay ak
+clm
+kaka 
+ngu cay
+met ak
+kmm
+sua len 
+son len 
+hang de
+ngu ak
+le ei
+sua cai 
+le nao 
+sua chu 
+phe ak
+tk ga 
+hang de
+manh nua 
+son ma 
+ngu ak 
+tk oc 
+chat mau
+s ay
+sua e
+le e
+manh ma
+phe ak
+tk ga
+s vay
+sua cai
+le ma 
+o kia 
+tk ngu 
+manh k 
+slow ak
+speed dei
+phe ak 
+phe v 
+oc c
+cn di
+tat ak
+clm 
+phe vat 
+sua mau 
+em rai
+manh cai
+le cai 
+s do
+sua e
+le e 
+manh di
+yeu v
+run ak
+keng ngay
+keng ma 
+manh k 
+sua k 
+sua ak
+sua de
+manh chu
+manh nua
+s kia
+manh ma 
+phe ak
+s kia
+manh chu
+tk ngu 
+sua ak 
+sua k
+son mau
+le mau 
+hang cai 
+le cai 
+son k 
+son ak
+manh ak 
+s vay 
+hang cai 
+duoi ak 
+tk ngu 
+ccho
+sua mau 
+le ma 
+manh di
+co ti 
+le ti
+clm
+phe ak 
+cn di
+chat mau 
+keng k
+keng ak
+keng ngay 
+manh cai 
+le nua 
+sua nua 
+chat mau 
+s ay
+son cai 
+le cai
+tk du
+du ak 
+lo lo
+on k 
+k ak 
+phe v
+o o
+cham v
+lag ak
+ngu v
+kaka
+r x 
+win ak 
+vtr ak
+noti ak 
+ez v
+ei ei
+s do
+chat k
+chat ak
+hang dei
+le cai
+son mau 
+em rai 
+le ma 
+cham v
+slow v
+bai ak 
+ei ku
+dit mm
+sua mau 
+so ak
+rum ak
+oc c
+le k 
+le ma 
+cn di
+tat ak
+kem v
+sua mau
+le ti
+co ti
+mau nao 
+em rai
+manh ma 
+sua k 
+son le
+hang de
+manh de
+yeu v
+cay ak
+clm
+kaka 
+ngu cay
+met ak
+kmm
+sua len 
+son len 
+hang de
+ngu ak
+le ei
+sua cai 
+le nao 
+sua chu 
+phe ak
+tk ga 
+hang de
+manh nua 
+son ma 
+ngu ak 
+tk oc 
+chat mau
+s ay
+sua e
+le e
+manh ma
+phe ak
+tk ga
+s vay
+sua cai
+le ma 
+o kia 
+tk ngu 
+manh k 
+slow ak
+speed dei
+phe ak 
+phe v 
+oc c
+cn di
+tat ak
+clm 
+phe vat 
+sua mau 
+em rai
+manh cai
+le cai 
+s do
+sua e
+le e 
+manh di
+yeu v
+run ak
+keng ngay
+keng ma 
+manh k 
+sua k 
+sua ak
+sua de
+manh chu
+manh nua
+s kia
+manh ma 
+phe ak
+s kia
+manh chu
+tk ngu 
+sua ak 
+sua k
+son mau
+le mau 
+hang cai 
+le cai 
+son k 
+son ak
+manh ak 
+s vay 
+hang cai 
+duoi ak 
+tk ngu 
+ccho
+sua mau 
+le ma 
+manh di
+co ti 
+le ti
+clm
+phe ak 
+cn di
+chat mau 
+keng k
+keng ak
+keng ngay 
+manh cai 
+le nua 
+sua nua 
+chat mau 
+s ay
+son cai 
+le cai
+tk du
+du ak 
+lo lo
+on k 
+k ak 
+phe v
+o o
+cham v
+lag ak
+ngu v
+kaka
+r x 
+win ak 
+vtr ak
+noti ak 
+ez v
+ei ei
+s do
+chat k
+chat ak
+hang dei
+le cai
+son mau 
+em rai 
+le ma 
+cham v
+slow v
+bai ak 
+ei ku
+dit mm
+sua mau 
+so ak
+rum ak
+oc c
+le k 
+le ma 
+cn di
+tat ak
+kem v
+sua mau
+le ti
+co ti
+mau nao 
+em rai
+manh ma 
+sua k 
+son le
+hang de
+manh de
+yeu v
+cay ak
+clm
+kaka 
+ngu cay
+met ak
+kmm
+sua len 
+son len 
+hang de
+ngu ak
+le ei
+sua cai 
+le nao 
+sua chu 
+phe ak
+tk ga 
+hang de
+manh nua 
+son ma 
+ngu ak 
+tk oc 
+chat mau
+s ay
+sua e
+le e
+manh ma
+phe ak
+tk ga
+s vay
+sua cai
+le ma 
+o kia 
+tk ngu 
+manh k 
+slow ak
+speed dei
+phe ak 
+phe v 
+oc c
+cn di
+tat ak
+clm 
+phe vat 
+sua mau 
+em rai
+manh cai
+le cai 
+s do
+sua e
+le e 
+manh di
+yeu v
+run ak
+keng ngay
+keng ma 
+manh k 
+sua k 
+sua ak
+sua de
+manh chu
+manh nua
+s kia
+manh ma 
+phe ak
+s kia
+manh chu
+tk ngu 
+sua ak 
+sua k
+son mau
+le mau 
+hang cai 
+le cai 
+son k 
+son ak
+manh ak 
+s vay 
+hang cai 
+duoi ak 
+tk ngu 
+ccho
+sua mau 
+le ma 
+manh di
+co ti 
+le ti
+clm
+phe ak 
+cn di
+chat mau 
+keng k
+keng ak
+keng ngay 
+manh cai 
+le nua 
+sua nua 
+chat mau 
+s ay
+son cai 
+le cai
+tk du
+du ak 
+lo lo
+on k 
+k ak 
+phe v
+o o
+cham v
+lag ak
+ngu v
+kaka
+r x 
+win ak 
+vtr ak
+noti ak 
+ez v
+ei ei
+s do
+chat k
+chat ak
+hang dei
+le cai
+son mau 
+em rai 
+le ma 
+cham v
+slow v
+bai ak 
+ei ku
+dit mm
+sua mau 
+so ak
+rum ak
+oc c
+le k 
+le ma 
+cn di
+tat ak
+kem v
+sua mau
+le ti
+co ti
+mau nao 
+em rai
+manh ma 
+sua k 
+son le
+hang de
+manh de
+yeu v
+cay ak
+clm
+kaka 
+ngu cay
+met ak
+kmm
+sua len 
+son len 
+hang de
+ngu ak
+le ei
+sua cai 
+le nao 
+sua chu 
+phe ak
+tk ga 
+hang de
+manh nua 
+son ma 
+ngu ak 
+tk oc 
+chat mau
+s ay
+sua e
+le e
+manh ma
+phe ak
+tk ga
+s vay
+sua cai
+le ma 
+o kia 
+tk ngu 
+manh k 
+slow ak
+speed dei
+phe ak 
+phe v 
+oc c
+cn di
+tat ak
+clm 
+phe vat 
+sua mau 
+em rai
+manh cai
+le cai 
+s do
+sua e
+le e 
+manh di
+yeu v
+run ak
+keng ngay
+keng ma 
+manh k 
+sua k 
+sua ak
+sua de
+manh chu
+manh nua
+s kia
+manh ma 
+phe ak
+s kia
+manh chu
+tk ngu 
+sua ak 
+sua k
+son mau
+le mau 
+hang cai 
+le cai 
+son k 
+son ak
+manh ak 
+s vay 
+hang cai 
+duoi ak 
+tk ngu 
+ccho
+sua mau 
+le ma 
+manh di
+co ti 
+le ti
+clm
+phe ak 
+cn di
+chat mau 
+keng k
+keng ak
+keng ngay 
+manh cai 
+le nua 
+sua nua 
+chat mau 
+s ay
+son cai 
+le cai
+tk du
+du ak 
+lo lo
+on k 
+k ak 
+phe v
+o o
+cham v
+lag ak
+ngu v
+kaka
+r x 
+win ak 
+vtr ak
+noti ak 
+ez v
+ei ei
+s do
+chat k
+chat ak
+hang dei
+le cai
+son mau 
+em rai 
+le ma 
+cham v
+slow v
+bai ak 
+ei ku
+dit mm
+sua mau 
+so ak
+rum ak
+oc c
+le k 
+le ma 
+cn di
+tat ak
+kem v
+sua mau
+le ti
+co ti
+mau nao 
+em rai
+manh ma 
+sua k 
+son le
+hang de
+manh de
+yeu v
+cay ak
+clm
+kaka 
+ngu cay
+met ak
+kmm
+sua len 
+son len 
+hang de
+ngu ak
+le ei
+sua cai 
+le nao 
+sua chu 
+phe ak
+tk ga 
+hang de
+manh nua 
+son ma 
+ngu ak 
+tk oc 
+chat mau`;
+
+let nhayData = rawText.split('\n').map(line => line.trim()).filter(line => line !== "");
+
 
   const flashUrl = "https://i.ibb.co/3mS0X9S/flash.gif";
   let state = {
@@ -227,6 +978,7 @@
                 <div class="row"><span>Emoji kèm</span><input id="s-emo" class="g-inp" value="🤣" style="width:90px;"></div>
                 <div class="row"><span>Hậu tố (Suffix)</span><input id="s-suffix" class="g-inp" value="[VNAMKY]" style="width:90px;"></div>
                 <div class="row"><span>Độ dài Anti-ban</span><input id="s-anti" type="number" class="g-inp" value="5" style="width:90px;"></div>
+                <div class="row" style="background:rgba(255,0,0,0.1); border:1px solid rgba(255,0,0,0.2);"><span>KHÔNG HẬU TỐ</span><label class="switch"><input type="checkbox" id="s-no-suffix"><span class="slider"></span></label></div>
             </div>
         </div>`;
 
@@ -254,12 +1006,8 @@
   // TAB LOGIC (FIXED)
   document.querySelectorAll(".nav-item").forEach((el) => {
     el.onclick = () => {
-      document
-        .querySelectorAll(".nav-item")
-        .forEach((i) => i.classList.remove("active"));
-      document
-        .querySelectorAll(".tab-content")
-        .forEach((t) => (t.style.display = "none"));
+      document.querySelectorAll(".nav-item").forEach((i) => i.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach((t) => (t.style.display = "none"));
       el.classList.add("active");
       document.getElementById("tab-" + el.dataset.tab).style.display = "block";
     };
@@ -277,9 +1025,7 @@
     if (file) {
       const reader = new FileReader();
       reader.onload = (ev) => {
-        const lines = ev.target.result
-          .split(/\r?\n/)
-          .filter((l) => l.trim() !== "");
+        const lines = ev.target.result.split(/\r?\n/).filter((l) => l.trim() !== "");
         if (lines.length > 0) {
           nhayData = lines;
           alert(`Đã nạp ${lines.length} dòng! Bật công tắc để Spam.`);
@@ -299,27 +1045,24 @@
     } else {
       document.execCommand("selectAll", false, null);
       document.execCommand("delete", false, null);
-      const anti = Math.random()
-        .toString(36)
-        .substring(2, 2 + parseInt(document.getElementById("s-anti").value));
-      const content = isRaw
-        ? text
-        : `${text} ${document.getElementById("s-emo").value} ${document.getElementById("s-suffix").value} [${anti}]`;
+      
+      const noSuffix = document.getElementById("s-no-suffix").checked;
+      let content;
+      
+      if (isRaw || noSuffix) {
+        // Nếu là RAW hoặc bật "KHÔNG HẬU TỐ", chỉ lấy text + emoji
+        content = noSuffix && !isRaw ? `${text} ${document.getElementById("s-emo").value}` : text;
+      } else {
+        const anti = Math.random().toString(36).substring(2, 2 + parseInt(document.getElementById("s-anti").value));
+        content = `${text} ${document.getElementById("s-emo").value} ${document.getElementById("s-suffix").value} [${anti}]`;
+      }
+      
       dt.setData("text/plain", content);
     }
-    box.dispatchEvent(
-      new ClipboardEvent("paste", { clipboardData: dt, bubbles: true }),
-    );
+    box.dispatchEvent(new ClipboardEvent("paste", { clipboardData: dt, bubbles: true }));
     box.dispatchEvent(new InputEvent("input", { bubbles: true }));
     await new Promise((r) => setTimeout(r, 150));
-    box.dispatchEvent(
-      new KeyboardEvent("keydown", {
-        key: "Enter",
-        code: "Enter",
-        keyCode: 13,
-        bubbles: true,
-      }),
-    );
+    box.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", code: "Enter", keyCode: 13, bubbles: true }));
     state.count++;
     document.getElementById("st-count").innerText = state.count;
   }
@@ -329,11 +1072,9 @@
       const delay = parseInt(document.getElementById("s-del").value) || 1500;
       switch (mode) {
         case "nhay":
-          await send(nhayData[state.indexNhay++ % nhayData.length]);
-          break;
         case "txt":
           await send(nhayData[state.indexNhay++ % nhayData.length]);
-          break; // Spam từ file TXT
+          break;
         case "van":
           await send(document.getElementById("i-van").value);
           break;
@@ -347,9 +1088,7 @@
           if (state.currentMedia) await send("", true, state.currentMedia);
           break;
         case "call":
-          const cBtn = document.querySelector(
-            'div[aria-label="Bắt đầu gọi thoại"], div[aria-label="Bắt đầu gọi video"]',
-          );
+          const cBtn = document.querySelector('div[aria-label="Bắt đầu gọi thoại"], div[aria-label="Bắt đầu gọi video"]');
           if (cBtn) cBtn.click();
           break;
         case "icon":
@@ -358,10 +1097,7 @@
           const last = rows[rows.length - 1];
           if (last) {
             last.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
-            setTimeout(() => {
-              // Giả lập thả icon tùy chỉnh bằng cách gửi icon vào textbox (do API reaction của FB phức tạp)
-              send(customIcon, true);
-            }, 100);
+            setTimeout(() => { send(customIcon, true); }, 100);
           }
           break;
       }
@@ -382,9 +1118,7 @@
     };
   };
 
-  ["nhay", "van", "tag", "flash", "media", "call", "icon", "txt"].forEach((m) =>
-    setupToggle("t-" + m, m),
-  );
+  ["nhay", "van", "tag", "flash", "media", "call", "icon", "txt"].forEach((m) => setupToggle("t-" + m, m));
 
   document.getElementById("b-raid").onclick = () => {
     const v = document.getElementById("i-raid").value || "RAID BY NAMKY";
@@ -414,10 +1148,7 @@
   rInput.type = "file";
   rInput.style.display = "none";
   document.body.appendChild(rInput);
-  document.getElementById("b-media").onclick = (e) => {
-    e.stopPropagation();
-    rInput.click();
-  };
+  document.getElementById("b-media").onclick = (e) => { e.stopPropagation(); rInput.click(); };
   rInput.onchange = (e) => {
     if (e.target.files[0]) {
       state.currentMedia = e.target.files[0];
@@ -425,13 +1156,9 @@
     }
   };
 
-  document.getElementById("close-v").onclick = () => {
-    state.running = false;
-    hub.remove();
-  };
+  document.getElementById("close-v").onclick = () => { state.running = false; hub.remove(); };
 
-  let d = false,
-    o = [0, 0];
+  let d = false, o = [0, 0];
   hub.onmousedown = (e) => {
     if (!["INPUT", "BUTTON"].includes(e.target.tagName)) {
       d = true;
